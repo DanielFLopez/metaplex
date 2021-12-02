@@ -83,7 +83,12 @@ p {
   background: #2D1428 ;
   border-radius: 15px;
   width: 700px !important;
-  max-height: 700px;
+
+  @media (max-width: @screen-sm-min) {
+    max-height: 1030px;
+    min-height: 700px;
+    margin-bottom: 30px;
+  }
 
   .ant-modal-content {
     background: #2D1428 ;
@@ -91,11 +96,22 @@ p {
 
   .ant-modal-footer {
     background: #2D1428 ;
+
+    @media (max-width: @screen-sm-min) {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .ant-modal-body {
     background: #2D1428 ;
     max-height: 600px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: @screen-sm-min) {
+      max-height: 100%;
+    }
   }
 
   .mint-modal-btn{
@@ -124,6 +140,12 @@ p {
     justify-content: space-between;
     height: 400px;
 
+    @media (max-width: @screen-sm-min) {
+      flex-direction: column-reverse;
+      height: 820px;
+      padding: 0;
+    }
+
     .nft-list {
       height: 360px;
       overflow-y: scroll;
@@ -144,6 +166,10 @@ p {
   display: flex;
   flex-direction: row;
 
+  @media (max-width: @screen-sm-min) {
+    flex-direction: column;
+  }
+
   .modal-image-container {
     margin: 10px;
   }
@@ -154,8 +180,16 @@ p {
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: @screen-sm-min) {
+      align-items: center;
+    }
+
     .modal-button-container{
       padding: 0;
+
+      @media (max-width: @screen-sm-min) {
+        padding: 25px 0;
+      }
     }
   }
 }
@@ -165,6 +199,11 @@ p {
   font-size: 30px;
   font-weight: 700;
   color: #E3E4D3;
+
+  @media (max-width: @screen-sm-min) {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
 }
 
 .modal-subtitle-mint {

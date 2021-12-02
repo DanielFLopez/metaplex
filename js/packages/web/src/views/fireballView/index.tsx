@@ -112,6 +112,7 @@ export const FireballView = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         footer={[]}
+        closable={false}
       >
         {
           minted ?
